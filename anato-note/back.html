@@ -1,0 +1,37 @@
+{{FrontSide}}
+
+<hr id="answer" />
+
+<div class="card-answer">
+  <div class="custom-card card-answer">{{Answer}}</div>
+</div>
+
+<button class="help">
+  <img src="circle-question.svg" />
+</button>
+
+<div class="mnemotechny-modal">
+  <div class="mnemotechny-title">Mnemotechny</div>
+
+  <div class="mnemotechny-content">{{Mnemotechny}}</div>
+
+  <button class="modal-ok-btn">Got it!</button>
+</div>
+<div class="modal-overlay"></div>
+
+<script>
+  const mnemotechnyBtn = document.querySelector(".help");
+  const modalOkBtn = document.querySelector(".modal-ok-btn");
+  const mnemotechnyModal = document.querySelector(".mnemotechny-modal");
+  const modalOverlay = document.querySelector(".modal-overlay");
+
+  mnemotechnyBtn.addEventListener("click", (e) => {
+    modalOverlay.style["display"] = "block";
+    mnemotechnyModal.style["display"] = "block";
+  });
+
+  modalOkBtn.addEventListener("click", (e) => {
+    modalOverlay.style["display"] = "none";
+    mnemotechnyModal.style["display"] = "none";
+  });
+</script>
