@@ -1,37 +1,11 @@
-{{FrontSide}}
+<div class="custom-card">
+  <div class="deck badge">{{Deck}}</div>
 
-<hr id="answer" />
+  <h1 class="card-question">What is being shown in the image?</h1>
 
-<div class="card-answer">
-  <div class="custom-card card-answer">{{Answer}}</div>
+  <div class="img img-answer">{{Image}}</div>
+
+  <div class="tags-list badge">{{Tags}}</div>
+
+  <div class="answer">Answer: {{Answer}}</div>
 </div>
-
-<button class="help">
-  <img src="circle-question.svg" />
-</button>
-
-<div class="mnemotechny-modal">
-  <div class="mnemotechny-title">Mnemotechny</div>
-
-  <div class="mnemotechny-content">{{Mnemotechny}}</div>
-
-  <button class="modal-ok-btn">Got it!</button>
-</div>
-<div class="modal-overlay"></div>
-
-<script>
-  const mnemotechnyBtn = document.querySelector(".help");
-  const modalOkBtn = document.querySelector(".modal-ok-btn");
-  const mnemotechnyModal = document.querySelector(".mnemotechny-modal");
-  const modalOverlay = document.querySelector(".modal-overlay");
-
-  mnemotechnyBtn.addEventListener("click", (e) => {
-    modalOverlay.style["display"] = "block";
-    mnemotechnyModal.style["display"] = "block";
-  });
-
-  modalOkBtn.addEventListener("click", (e) => {
-    modalOverlay.style["display"] = "none";
-    mnemotechnyModal.style["display"] = "none";
-  });
-</script>
