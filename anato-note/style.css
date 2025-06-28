@@ -13,11 +13,16 @@
     "deck tags"
     "question question"
     "image image"
-    "answer answer";
+    "answer answer"
+    "mnemo mnemo";
   grid-template-columns: 1fr 1fr;
   padding: 1.5rem;
   color: #f0f0f0;
   grid-gap: 10px;
+}
+
+.mnemo {
+  grid-area: mnemo;
 }
 
 .mobile .custom-card {
@@ -25,6 +30,7 @@
     "question"
     "image"
     "answer"
+    "mnemo"
     "deck"
     "tags";
   grid-template-columns: 1fr;
@@ -88,4 +94,12 @@ img {
   font-size: 1.5em;
   color: #09f;
   font-weight: 600;
+}
+
+.mnemo-modal {
+  display: hidden;
+}
+
+.mobile .mnemo {
+  min-height: 50px;
 }
