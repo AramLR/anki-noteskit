@@ -21,6 +21,15 @@
   grid-gap: 10px;
 }
 
+.no-tags {
+  grid-template-areas:
+    "deck deck"
+    "question question"
+    "image image"
+    "answer answer"
+    "mnemo mnemo";
+}
+
 .mnemo {
   grid-area: mnemo;
 }

@@ -1,3 +1,4 @@
+{{#Tags}}
 <div class="custom-card">
   <div class="deck badge">{{Deck}}</div>
 
@@ -7,3 +8,14 @@
 
   <div class="tags-list badge">{{Tags}}</div>
 </div>
+{{/Tags}} 
+
+{{^Tags}}
+<div class="custom-card no-tags">
+  <div class="deck badge">{{Deck}}</div>
+
+  <h1 class="card-question">What is being shown in the image?</h1>
+
+  <div class="img">{{Image}}</div>
+</div>
+{{/Tags}}
