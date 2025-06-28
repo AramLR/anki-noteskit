@@ -45,6 +45,15 @@
   grid-template-columns: 1fr;
 }
 
+.mobile .no-tags {
+  grid-template-areas:
+    "question"
+    "image"
+    "answer"
+    "mnemo"
+    "deck";
+}
+
 .badge {
   background: #3a3a3a;
   border-radius: 0.75rem;
