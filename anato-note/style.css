@@ -20,6 +20,16 @@
   grid-gap: 10px;
 }
 
+.mobile .custom-card {
+  grid-template-areas:
+    "question"
+    "image"
+    "answer"
+    "deck"
+    "tags";
+  grid-template-columns: 1fr;
+}
+
 .badge {
   background: #3a3a3a;
   border-radius: 0.75rem;
@@ -56,18 +66,15 @@
 .img {
   grid-area: image;
   margin: 0 auto;
-  max-width: 50vw;
+  max-height: 50vh;
   border-radius: 1rem;
   transition: scale 0.1s ease-out;
-}
-
-.img-answer {
-  animation: imgScale 1s forwards;
 }
 
 img {
   border-radius: 1rem;
   border: 1px solid #2a2a2a;
+  max-height: 50vh;
 }
 
 .img:hover {
@@ -81,25 +88,4 @@ img {
   font-size: 1.5em;
   color: #09f;
   font-weight: 600;
-  animation: answerScale 1s both;
-}
-
-@keyframes imgScale {
-  from {
-    scale: 1;
-  }
-
-  to {
-    scale: 0.5;
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes answerScale {
-  from {
-  }
-  to {
-    transform: translateY(-500%);
-    font-size: 1.8em;
-  }
 }
