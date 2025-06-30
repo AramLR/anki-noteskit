@@ -1,0 +1,135 @@
+.card {
+  font-family: arial;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+.cloze {
+  color: lightblue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.custom-card {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  color: #f0f0f0;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2a2a2a;
+  display: grid;
+  grid-template-areas:
+    "deck tags"
+    "question question"
+    "image image"
+    "answer answer"
+    "mnemo mnemo";
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5rem;
+  color: #f0f0f0;
+  grid-gap: 10px;
+}
+
+.no-tags {
+  grid-template-areas:
+    "deck deck"
+    "question question"
+    "image image"
+    "answer answer"
+    "mnemo mnemo";
+}
+
+.mnemo {
+  grid-area: mnemo;
+}
+
+.mobile .custom-card {
+  grid-template-areas:
+    "question"
+    "image"
+    "answer"
+    "mnemo"
+    "deck"
+    "tags";
+  grid-template-columns: 1fr;
+}
+
+.mobile .no-tags {
+  grid-template-areas:
+    "question"
+    "image"
+    "answer"
+    "mnemo"
+    "deck";
+}
+
+.badge {
+  background: #3a3a3a;
+  border-radius: 0.75rem;
+  border: 1px solid #444;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-overflow: ellipsis;
+}
+
+.deck {
+  grid-area: deck;
+}
+
+.tags-list {
+  grid-area: tags;
+}
+
+.card-question {
+  grid-area: question;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.img {
+  grid-area: image;
+  margin: 0 auto;
+  max-height: 50vh;
+  border-radius: 1rem;
+  transition: scale 0.1s ease-out;
+}
+
+img {
+  border-radius: 1rem;
+  border: 1px solid #2a2a2a;
+  max-height: 50vh;
+}
+
+.img:hover {
+  scale: 1.5;
+  transition: scale 0.5s ease-in;
+}
+
+.answer {
+  grid-area: answer;
+  text-align: center;
+  font-size: 1em;
+  color: #09f;
+  font-weight: 600;
+}
+
+.mnemo-modal {
+  display: hidden;
+}
+
+.mobile .mnemo {
+  min-height: 50px;
+}
