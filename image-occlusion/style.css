@@ -1,0 +1,37 @@
+#image-occlusion-canvas {
+  --inactive-shape-color: #ffeba2;
+  --active-shape-color: #ff8e8e;
+  --inactive-shape-border: 1px #212121;
+  --active-shape-border: 1px #212121;
+  --highlight-shape-color: #ff8e8e00;
+  --highlight-shape-border: 1px #ff8e8e;
+}
+
+.card {
+  font-family: arial;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.custom-card {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  color: #f0f0f0;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2a2a2a;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: #f0f0f0;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 1em;
+}
