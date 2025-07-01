@@ -1,0 +1,30 @@
+{{#Tags}}
+<div class="custom-card">
+  <div class="deck badge">{{Deck}}</div>
+
+  <h1 class="card-question">{{Name}}</h1>
+
+  <div class="fields">
+    <p class="author">Author:</p>
+    <p class="plot">Plot:</p>
+    <p class="movement">Literary movement:</p>
+    <p class="moral">Moral:</p>
+  </div>
+
+  <div class="tags-list badge">{{Tags}}</div>
+</div>
+{{/Tags}}
+{{^Tags}}
+<div class="custom-card no-tags">
+  <div class="deck badge">{{Deck}}</div>
+
+  <h1 class="card-question">{{Name}}</h1>
+
+  <div class="fields">
+    <p class="author">Author:</p>
+    <p class="plot">Plot:</p>
+    <p class="movement">Literary movement:</p>
+    <p class="moral">Moral:</p>
+  </div>
+</div>
+{{/Tags}}

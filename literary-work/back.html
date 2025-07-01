@@ -1,0 +1,59 @@
+{{#Tags}}
+<div class="mnemo-modal">{{Mnemotechny}}</div>
+
+<div class="custom-card">
+  <div class="deck badge">{{Deck}}</div>
+
+  <h1 class="card-question">{{Name}}</h1>
+
+  <div class="fields">
+    <p class="author">Author:</p>
+    <p class="plot">Plot:</p>
+    <p class="movement">Literary movement:</p>
+    <p class="moral">Moral:</p>
+  </div>
+
+  <div class="tags-list badge">{{Tags}}</div>
+
+  <button class="mnemo">Show Mnemo</button>
+</div>
+{{/Tags}} 
+{{^Tags}}
+<div class="mnemo-modal">{{Mnemotechny}}</div>
+
+<div class="custom-card no-tags">
+  <div class="deck badge">{{Deck}}</div>
+
+  <h1 class="card-question">{{Name}}</h1>
+
+  <div class="fields">
+    <p class="author">Author:</p>
+    <p class="author-answer">{{Author}}</p>
+    <p class="plot">Plot:</p>
+    <p class="plot-answer">{{Plot}}</p>
+    <p class="movement">Literary movement:</p>
+    <p class="movement-answer">{{Literary movement}}</p>
+    <p class="moral">Moral:</p>
+    <p class="moral-answer">{{Moral}}</p>
+  </div>
+
+  <button class="mnemo">Show Mnemo</button>
+</div>
+{{/Tags}}
+
+<script>
+  const btn = document.querySelector(".mnemo");
+  const mnemoModal = document.querySelector(".mnemo-modal");
+  const mnemo = mnemoModal.textContent;
+
+  function showMnemo() {
+    if (mnemo.trim() != "") {
+      alert(mnemo);
+      return;
+    }
+
+    alert("You don't have a mnemotechny");
+  }
+
+  btn.addEventListener("click", showMnemo);
+</script>
